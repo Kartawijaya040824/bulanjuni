@@ -1,0 +1,190 @@
+<div id="emading">
+<style>
+#emading{font-family:Arial,sans-serif;background:#f2f7f3;color:#173d32;border-radius:20px;overflow:hidden;max-width:1100px;margin:auto}
+#emading *{box-sizing:border-box}
+#emading .hero{padding:40px 20px;text-align:center;color:white;background:linear-gradient(135deg,#073b31,#078568,#a9cf69)}
+#emading .hero h1{font-size:clamp(32px,6vw,58px);margin:18px 0 10px;color:white}
+#emading .hero p{line-height:1.7;color:white}
+#emading .pill{display:inline-block;border:1px solid #ffffff90;border-radius:30px;padding:8px 13px;font-size:11px;letter-spacing:2px}
+#emading .content{padding:25px 18px}
+#emading h2{font-size:23px;color:#145642;margin-bottom:8px}
+#emading .sub{font-size:13px;color:#708178;line-height:1.6;margin-bottom:20px}
+#emading .highlights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:32px}
+#emading .highlight{background:white;border:1px solid #dfebe2;border-radius:16px;padding:20px 14px;text-align:left;cursor:pointer;color:#174b3a}
+#emading .highlight:hover,#emading .event:hover{transform:translateY(-3px);box-shadow:0 8px 20px #163f301c}
+#emading .emoji{font-size:30px;display:block;margin-bottom:10px}
+#emading .highlight strong{font-size:15px}
+#emading .highlight p{font-size:12px;line-height:1.6;color:#718078;margin-bottom:0}
+#emading .agenda{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+#emading .event{display:flex;align-items:flex-start;gap:12px;background:white;border:1px solid #dfebe2;border-radius:15px;padding:15px 12px;text-align:left;cursor:pointer;color:#174b3a;transition:.2s;width:100%}
+#emading .date{min-width:55px;padding:9px 3px;background:#e5f3e7;color:#17664b;border-radius:10px;text-align:center;font-size:11px}
+#emading .date b{display:block;font-size:24px}
+#emading .event h3{font-size:14px;line-height:1.5;margin:2px 0 7px}
+#emading .event p{font-size:11px;line-height:1.6;color:#77857d;margin:0}
+#emading .label{display:inline-block;margin-top:8px;background:#edf5ee;border-radius:20px;padding:5px 8px;font-size:10px;color:#317451}
+#emading .quote{text-align:center;background:#e0f1e5;border-radius:16px;padding:25px 15px;margin-top:28px}
+#emading .quote h3{color:#145642;line-height:1.5}
+#emading .note{font-size:11px;line-height:1.7;color:#786942;background:#fff8e6;padding:12px;border-radius:10px;margin-top:20px}
+#emading .footer{background:#103d32;color:white;text-align:center;padding:22px 10px;font-size:11px;line-height:1.8}
+#emading button:focus-visible{outline:3px solid #e7b84a;outline-offset:3px}
+
+/* JENDELA POP-UP */
+#emading .modal{display:none;position:fixed;inset:0;z-index:999999;background:#071d18d9;padding:18px;align-items:center;justify-content:center}
+#emading .modal.open{display:flex}
+#emading .dialog{position:relative;background:white;width:100%;max-width:540px;max-height:92vh;overflow:auto;border-radius:20px;box-shadow:0 20px 70px #0005;animation:masuk .2s ease}
+#emading .dialog img{width:100%;height:260px;object-fit:cover;display:block;background:#e3eee6}
+#emading .detail{padding:22px}
+#emading .detail h2{font-size:23px;margin:8px 0 12px}
+#emading .detail p{font-size:14px;line-height:1.8;color:#5c7065}
+#emading .detail .tanggal{font-weight:bold;color:#19805a;font-size:12px}
+#emading .close{position:absolute;right:12px;top:12px;border:0;background:white;color:#174b3a;border-radius:50%;width:40px;height:40px;font-size:25px;cursor:pointer;box-shadow:0 2px 10px #0002}
+#emading .closebtn{border:0;background:#14674d;color:white;border-radius:10px;padding:12px 18px;cursor:pointer;font-weight:bold}
+@keyframes masuk{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:560px){
+ #emading .highlights{grid-template-columns:1fr}
+ #emading .highlight{display:flex;align-items:center;gap:13px;padding:14px}
+ #emading .highlight .emoji{margin:0;min-width:36px}
+ #emading .agenda{grid-template-columns:1fr}
+ #emading .content{padding:20px 12px}
+ #emading .dialog img{height:210px}
+}
+</style>
+
+<header class="hero">
+ <span class="pill">BULETIN DIGITAL SEKOLAH • 2026</span>
+ <h1>e-MADING<br>JUNI EDITION</h1>
+ <p>Lingkungan • Kesehatan • Kelulusan</p>
+ <p>Berkarya, peduli, dan menginspirasi!</p>
+</header>
+
+<main class="content">
+ <h2>✦ June Highlights</h2>
+ <p class="sub">Klik kartu untuk melihat gambar dan informasi selengkapnya.</p>
+
+ <div class="highlights">
+  <button class="highlight" data-item="0">
+   <span class="emoji">🌱</span><div><strong>Peduli Bumi</strong><p>Mulai dari langkah kecil di sekolah.</p></div>
+  </button>
+  <button class="highlight" data-item="1">
+   <span class="emoji">🎨</span><div><strong>Ruang Berkarya</strong><p>Tunjukkan kreativitas dan inovasi.</p></div>
+  </button>
+  <button class="highlight" data-item="2">
+   <span class="emoji">🏆</span><div><strong>Apresiasi Prestasi</strong><p>Hargai proses dan raih masa depan.</p></div>
+  </button>
+ </div>
+
+ <h2>📅 Kalender Kegiatan Juni</h2>
+ <p class="sub">Pilih kegiatan untuk melihat gambar, tanggal, dan deskripsinya.</p>
+
+ <div class="agenda">
+  <button class="event" data-item="3">
+   <span class="date">JUN<b>05</b></span><div><h3>🌿 Hari Lingkungan Hidup Sedunia</h3><p>Menjaga bumi dimulai dari diri sendiri.</p><span class="label">PERINGATAN</span></div>
+  </button>
+  <button class="event" data-item="4">
+   <span class="date">JUN<b>08</b></span><div><h3>🌊 Hari Laut Sedunia</h3><p>Menjaga laut dan ekosistemnya.</p><span class="label">PERINGATAN</span></div>
+  </button>
+  <button class="event" data-item="5">
+   <span class="date">JUN<b>12</b></span><div><h3>🎓 Pengumuman Kelulusan dan Apresiasi Siswa Kelas XII</h3><p>Mengapresiasi perjuangan dan pencapaian.</p><span class="label">AGENDA SEKOLAH</span></div>
+  </button>
+  <button class="event" data-item="6">
+   <span class="date">JUN<b>14</b></span><div><h3>🩸 Hari Donor Darah Sedunia</h3><p>Berbagi kepedulian untuk sesama.</p><span class="label">PERINGATAN</span></div>
+  </button>
+  <button class="event" data-item="7">
+   <span class="date">JUN<b>15</b></span><div><h3>🎨 Pameran Karya dan Proyek Siswa</h3><p>Pamerkan hasil kreativitas dan inovasi.</p><span class="label">AGENDA SEKOLAH</span></div>
+  </button>
+  <button class="event" data-item="8">
+   <span class="date">JUN<b>18</b></span><div><h3>📚 Pembagian Rapor dan Evaluasi Akhir Tahun</h3><p>Evaluasi hasil belajar siswa.</p><span class="label">AGENDA SEKOLAH</span></div>
+  </button>
+  <button class="event" data-item="9">
+   <span class="date">JUN<b>22</b></span><div><h3>🏖️ Awal Liburan Akhir Tahun Ajaran</h3><p>Waktunya beristirahat dan mengeksplorasi hal baru.</p><span class="label">AGENDA SEKOLAH</span></div>
+  </button>
+  <button class="event" data-item="10">
+   <span class="date">JUN<b>25</b></span><div><h3>♻️ Tantangan Sekolah Minim Sampah</h3><p>Kurangi sampah dan biasakan daur ulang.</p><span class="label">AGENDA SEKOLAH</span></div>
+  </button>
+ </div>
+
+ <section class="quote">
+  <span style="font-size:30px">🌍</span>
+  <h3>“Perubahan besar dimulai dari langkah kecil.”</h3>
+  <p>Jadilah generasi yang peduli lingkungan, kreatif dalam berkarya, dan inspiratif dalam tindakan.</p>
+ </section>
+ <div class="note"><b>Catatan:</b> Tanggal kelulusan, pembagian rapor, dan liburan merupakan usulan agenda yang perlu disesuaikan dengan kalender pendidikan dan kebijakan sekolah.</div>
+</main>
+
+<footer class="footer"><b>e-MADING SMA 2026</b><br>JUNI EDITION • INFORMASI • INSPIRASI • KREATIVITAS</footer>
+
+<!-- JENDELA GAMBAR -->
+<div class="modal" id="emading-modal" role="dialog" aria-modal="true" aria-labelledby="emading-title">
+ <div class="dialog">
+  <button class="close" id="emading-close" aria-label="Tutup">&times;</button>
+  <img id="emading-img" src="" alt="Gambar kegiatan" />
+  <div class="detail">
+   <div class="tanggal" id="emading-date"></div>
+   <h2 id="emading-title"></h2>
+   <p id="emading-desc"></p>
+   <button class="closebtn" id="emading-close2">Tutup informasi</button>
+  </div>
+ </div>
+</div>
+
+<script>
+(function(){
+ const root = document.getElementById('emading');
+ if (!root || root.dataset.ready) return;
+ root.dataset.ready = '1';
+
+ const items = [
+  {title:'Peduli Bumi',date:'JUNE HIGHLIGHTS',desc:'Perubahan besar dimulai dari kebiasaan kecil. Mari menjaga kebersihan, menghemat energi, menanam pohon, dan merawat lingkungan sekolah.',img:'photo-1441974231531-c6227db76b6e'},
+  {title:'Ruang Berkarya',date:'JUNE HIGHLIGHTS',desc:'Kreativitas siswa adalah sumber inspirasi. Tuangkan ide melalui seni, teknologi, proyek inovasi, dan karya yang bermanfaat.',img:'photo-1513364776144-60967b0f800f'},
+  {title:'Apresiasi Prestasi',date:'JUNE HIGHLIGHTS',desc:'Setiap pencapaian berawal dari usaha. Hargai proses belajar, rayakan prestasi, dan jadikan pengalaman sebagai bekal masa depan.',img:'photo-1523050854058-8df90110c9f1'},
+  {title:'Hari Lingkungan Hidup Sedunia',date:'5 Juni 2026',desc:'Momentum untuk meningkatkan kepedulian terhadap bumi melalui pengurangan sampah, penghijauan, dan kebiasaan ramah lingkungan.',img:'photo-1441974231531-c6227db76b6e'},
+  {title:'Hari Laut Sedunia',date:'8 Juni 2026',desc:'Laut memiliki peran penting bagi kehidupan. Kurangi sampah plastik dan ikut menjaga kebersihan pantai serta ekosistem laut.',img:'photo-1500375592092-40eb2168fd21'},
+  {title:'Pengumuman Kelulusan dan Apresiasi Siswa Kelas XII',date:'12 Juni 2026 • Usulan agenda sekolah',desc:'Momen untuk mengapresiasi perjalanan belajar, kerja keras, dan pencapaian siswa kelas XII dalam menyelesaikan pendidikan.',img:'photo-1523050854058-8df90110c9f1'},
+  {title:'Hari Donor Darah Sedunia',date:'14 Juni 2026',desc:'Donor darah membantu menyelamatkan nyawa. Peringatan ini mengajak kita memahami pentingnya kepedulian dan donor darah yang aman.',img:'photo-1615461066841-6116e61058f4'},
+  {title:'Pameran Karya dan Proyek Siswa',date:'15 Juni 2026 • Usulan agenda sekolah',desc:'Ajang untuk menampilkan karya seni, proyek teknologi, hasil penelitian, dan inovasi siswa. Berani berkarya dan saling menginspirasi!',img:'photo-1513364776144-60967b0f800f'},
+  {title:'Pembagian Rapor dan Evaluasi Akhir Tahun',date:'18 Juni 2026 • Usulan agenda sekolah',desc:'Waktu untuk melihat perkembangan belajar, mengevaluasi hasil selama satu tahun, dan menyusun semangat baru untuk pembelajaran berikutnya.',img:'photo-1456513080510-7bf3a84b82f8'},
+  {title:'Awal Liburan Akhir Tahun Ajaran',date:'22 Juni 2026 • Usulan agenda sekolah',desc:'Manfaatkan liburan untuk beristirahat, membaca, mengeksplorasi minat, membantu keluarga, dan mencoba pengalaman baru.',img:'photo-1507525428034-b723cf961d3e'},
+  {title:'Tantangan Sekolah Minim Sampah',date:'25 Juni 2026 • Usulan agenda sekolah',desc:'Ayo bawa botol minum dan tempat makan sendiri, kurangi plastik sekali pakai, pilah sampah, dan gunakan kembali barang yang masih layak.',img:'photo-1532996122724-e3c354a0b15b'}
+ ];
+
+ const modal = root.querySelector('#emading-modal');
+ const picture = root.querySelector('#emading-img');
+ const title = root.querySelector('#emading-title');
+ const date = root.querySelector('#emading-date');
+ const desc = root.querySelector('#emading-desc');
+ const close = root.querySelector('#emading-close');
+
+ function openItem(index){
+   const item = items[index];
+   if(!item) return;
+   title.textContent = item.title;
+   date.textContent = item.date;
+   desc.textContent = item.desc;
+   picture.src = 'https://images.unsplash.com/' + item.img +
+     '?auto=format&fit=crop&w=1000&q=85';
+   picture.alt = item.title;
+   modal.classList.add('open');
+   close.focus();
+ }
+
+ function closeModal(){
+   modal.classList.remove('open');
+ }
+
+ root.querySelectorAll('[data-item]').forEach(function(button){
+   button.addEventListener('click',function(){
+     openItem(Number(button.getAttribute('data-item')));
+   });
+ });
+
+ close.addEventListener('click',closeModal);
+ root.querySelector('#emading-close2').addEventListener('click',closeModal);
+ modal.addEventListener('click',function(e){
+   if(e.target === modal) closeModal();
+ });
+ document.addEventListener('keydown',function(e){
+   if(e.key === 'Escape' && modal.classList.contains('open')) closeModal();
+ });
+})();
+</script>
+</div>
